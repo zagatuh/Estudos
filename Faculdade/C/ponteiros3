@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int encontrarMaior(int *p, int tamanho)
+{
+    int maior = *p;
+
+    for(int i = 1; i < tamanho; i++) {
+        p++;
+
+        if(*p > maior) {
+            maior = *p;
+        }
+    }
+
+    return maior;
+}
+
+int main()
+{
+    int numeros[6] = {12, 45, 7, 89, 23, 4};
+
+    printf("%d\n", encontrarMaior(numeros, 6));
+
+    return 0;
+}
